@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "author": "Matias Suarez Ibarra",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": -31.8, "left": -45.2, "attrs": {} },
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -19.2, "left": 321.64, "attrs": {} },
+    {
+      "type": "wokwi-hx711",
+      "id": "cell1",
+      "top": -170.2,
+      "left": 2.6,
+      "attrs": { "type": "5kg" }
+    },
+    { "type": "wokwi-servo", "id": "servo1", "top": 199.6, "left": -9.6, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:5V", "bb1:bp.25", "red", [ "h-57.45", "v-19.2", "h-38.4" ] ],
+    [ "esp:GND.1", "bb1:bn.25", "black", [ "h-67.05", "v38.4" ] ],
+    [ "servo1:GND", "bb1:bn.1", "black", [ "h0" ] ],
+    [ "cell1:GND", "bb1:bn.2", "black", [ "h0" ] ],
+    [ "cell1:VCC", "bb1:bp.4", "red", [ "h-19.2" ] ],
+    [ "servo1:PWM", "esp:16", "orange", [ "h-9.6", "v38.6", "h460.8", "v-192" ] ],
+    [ "cell1:DT", "esp:14", "blue", [ "h-28.8", "v76.3", "h326.4", "v9.6" ] ],
+    [ "cell1:SCK", "esp:12", "green", [ "h-28.8", "v76", "h316.8", "v172.8" ] ],
+    [ "servo1:V+", "bb1:bp.1", "red", [ "h-9.6", "v-105.5" ] ]
+  ],
+  "dependencies": {}
+}

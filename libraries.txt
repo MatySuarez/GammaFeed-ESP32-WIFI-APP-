@@ -1,0 +1,12 @@
+# Wokwi Library List
+# See https://docs.wokwi.com/guides/libraries
+
+# Automatically added based on includes:
+Servo
+
+HX711
+FireBase32
+Firebase ESP32 Client
+AllThingsTalk WiFi SDK
+ESP32Servo
+WebServer_ESP32_ENC
